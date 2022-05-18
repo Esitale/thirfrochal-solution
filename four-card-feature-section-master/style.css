@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: 90% 85%;
+}
+h1, h3 {
+    font-weight: 600;
+}
+p{
+    font-size: 15px;
+    font-weight: 200;
+}
+html {
+    font-family: 'Poppins', sans-serif;
+}
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-1{grid-area: content-1;}
+.content-2{grid-area: content-2;}
+.content-3{grid-area: content-3;}
+.content-4{grid-area: content-4;}
+
+.content {
+    display: grid;
+    grid-template-areas: 'content-1 content-1 content-1' 'content-2 content-3 content-4';
+    gap: 40px;
+    padding: 200px;
+}
+.content-item {
+    min-width: 250px;
+    min-height: 250px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 25px;
+    border-radius: 5px;
+}
+.content-1 {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+.content-item-one h1 {
+    font-size: 32px;
+}
+.content-item-one h1 span {
+    font-weight: 200;
+}
+.content-item-one p{
+   font-weight: 400;
+}
+.content-2,
+.content-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-3 {
+    display: grid;
+    gap: 40px;
+}
+.content-item.two {
+    border-top: 4px solid hsl(180, 62%, 55%);
+    background-image: url(images/icon-supervisor.svg);
+}
+.content-item.three-a {
+    border-top: 4px solid hsl(0, 78%, 62%);
+    background-image: url(images/icon-team-builder.svg);
+}
+.content-item.three-b {
+    border-top: 4px solid orange;
+    background-image: url(images/icon-karma.svg);
+}
+.content-item.four {
+    border-top: 4px solid hsl(212, 86%, 64%);
+    background-image: url(images/icon-calculator.svg);
+}
+@media (max-width: 850px) {
+    p{font-size: 13px}
+    .content {display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;}
+    .content-1 { min-width: 340px;}
+    .content-item-one h1 {font-size: 27px;}
+    .content-item-one p{font-size: 16px;}
+    
+}
